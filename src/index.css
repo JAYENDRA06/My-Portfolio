@@ -24,6 +24,22 @@
   scroll-behavior: smooth;
 }
 
+/* Loader */
+.loader{
+  background-color: var(--dark-color);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader > p{
+  margin-top: 10vh;
+}
+
 /* Progress bar */
 
 .progress-bar {
