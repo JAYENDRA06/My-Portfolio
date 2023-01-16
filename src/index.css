@@ -352,6 +352,7 @@ nav > ul > li > a:hover{
 
 .projectContainer > .decArrow, .incArrow{
   width: 3.5vh;
+  cursor: pointer;
 }
 
 .projectContainer > .incArrow{
