@@ -23,7 +23,7 @@ function Socials() {
   return (
     <ul className="socials">
       {socialsArray.map((social) => (
-        <li>
+        <li key={social.socialLink}>
           <a href={social.socialLink}>
             <i className={social.socialIcon}></i>
           </a>

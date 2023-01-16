@@ -5,7 +5,7 @@ function AllSkills(props){
     return (
         <div className="skillsFlex">
             {props.skillBoxes.map((skillbox) => (
-                <SkillBox title={skillbox.title} skills={skillbox.skills}/>
+                <SkillBox title={skillbox.title} skills={skillbox.skills} key={skillbox.title} />
             ))}
         </div>
     );

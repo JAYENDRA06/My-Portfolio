@@ -28,7 +28,7 @@ function Navbar() {
     <nav>
       <ul>
         {navContent.map((content) => (
-          <li>
+          <li key={content.navName}>
             <a href={content.navLink}>{content.navName}</a>
           </li>
         ))}

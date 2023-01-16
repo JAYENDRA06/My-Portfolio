@@ -1,26 +1,55 @@
 import React from "react";
 
-function Form() {
+function Form(props) {
+
+  function updateValues(event) {
+    const {name, value} = event.target;
+    props.setFormValues((prevValue) => ({
+        ...prevValue,
+        [name]: value
+    }));
+  }
+
   return (
-    <form className="contactForm" onSubmit="">
+    <form className="contactForm" ref={props.form} onSubmit={props.sendEmail}>
       <div>
-        <p>Email: </p>
+        <p>Name: </p>
         <input
-          name="email"
-          type="email"
-          placeholder="jayendraawasthi06@gmail.com"
+          name="user_name"
+          type="text"
+          placeholder="Jayendra Awasthi"
+          value={props.formValues.user_name}
+          onChange={updateValues}
+          required
         />
       </div>
       <div>
-        <p>Subject: </p>
-        <input name="Subject" type="text" placeholder="let’s have a coffee" />
+        <p>Email: </p>
+        <input
+          type="email"
+          name="user_email"
+          placeholder="youremail@email.com"
+          value={props.formValues.user_email} 
+          onChange={updateValues}
+          required
+        />
       </div>
       <div>
-        <p>Content:</p>
+        <p>Message:</p>
         <textarea
-          name="content"
-          placeholder="and spoil some attack on titan’s episodes"
+          name="message"
+          placeholder="let’s have a coffee and spoil some attack on titan’s episodes"
+          value={props.formValues.message} 
+          onChange={updateValues}
+          required
         ></textarea>
+      </div>
+
+      <div>
+        <p> </p>
+        <button type="submit" value="Send">
+          Send
+        </button>
       </div>
     </form>
   );

@@ -61,11 +61,11 @@ nav > ul > li > a:hover{
 
 /* Socials */
 .socials{
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute;
   height: 100%;
   margin: auto 2em;
   z-index: 99;
@@ -95,13 +95,28 @@ nav > ul > li > a:hover{
   flex-direction: column;
   position: relative;
   z-index: 10;
+  margin-top: 8vh;
 }
 
 .contactForm > div{
   display: flex;
-  margin: 2rem;
+  margin: 1.5rem;
   justify-content: center;
   align-items: center;
+}
+
+.contactForm > div > button{
+  width: 30%;
+  border: 0;
+  border-radius: 5px;
+  background-color: var(--blue-color);
+  padding: 0.7em;
+  color: white;
+  transition: 0.3s;
+}
+.contactForm > div > button:hover{
+  background-color:#414383;
+
 }
 
 .contactForm > div > p{
@@ -317,6 +332,14 @@ nav > ul > li > a:hover{
   position: relative;
   height: 100vh;
 }
+.section3 > h1 {
+  color: var(--blue-color);
+  font-weight: lighter;
+  text-align: center;
+  padding: 2em 0 1em 0;
+  position: relative;
+  z-index: 2;
+}
 
 
 /* Background3 */
@@ -357,6 +380,14 @@ nav > ul > li > a:hover{
   background-color: var(--blue-color);
   position: relative;
 }
+.section4 > h1{
+  color: var(--skin-color);
+  font-weight: lighter;
+  text-align: center;
+  padding: 2em 0 1em 0;
+  position: relative;
+  z-index: 2;
+}
 
 /* Section5 */
 
@@ -369,7 +400,7 @@ nav > ul > li > a:hover{
   color: var(--blue-color);
   font-weight: lighter;
   text-align: center;
-  /* margin: 2em 0 1em 0; */
+  padding: 2em 0 1em 0;
   position: relative;
   z-index: 2;
 }
