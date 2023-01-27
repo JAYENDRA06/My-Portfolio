@@ -8,10 +8,10 @@ const workExp = [
         desc: "Worked with the web dev team on internal projects involving the usage of languages like HTML, CSS ,JS and Php with Bootstrap"
     },
     {
-        time: "16th july 2021 - 16th aug 2021",
+        time: "January 2022 - January 2023",
         position: "Design Head",
         company: "ISA-VIT",
-        desc: "Worked dasdasdasfsdfsdssvb ML,CSS ,JS and Php with Bootstrap"
+        desc: "Mentored core members on design and web development. Designed user interfaces for internal projects and designed poster for publicity"
     }
 ]
 

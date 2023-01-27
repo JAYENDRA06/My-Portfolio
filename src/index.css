@@ -277,7 +277,11 @@ nav > ul > li > a:hover{
   width: 40%;
   margin: auto;
   color: white;
-  text-shadow: 2px 2px #34343442;
+  /* text-shadow: 2px 2px #34343442; */
+  background-color: #34343442;
+  border-radius: 5px;
+  padding: 2em;
+  transform: translateY(-20px);
 }
 
 
