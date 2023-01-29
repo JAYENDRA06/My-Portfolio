@@ -10,13 +10,14 @@ function Section1() {
   return (
     <section className="section1" id="home">
       <Socials />
-      <Navbar />
       <Background1 />
-      <div className="heading">
-        <h1>Hello Samuri</h1>
-        <p>I am Jayendra Awasthi</p>
+      <div className="outerHeading">
+        <div className="heading">
+          <h1>Hello Samuri</h1>
+          <p>I am Jayendra Awasthi</p>
+        </div>
+        <div className="description">{description}</div>
       </div>
-      <div className="description">{description}</div>
     </section>
   );
 }

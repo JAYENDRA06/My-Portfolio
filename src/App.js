@@ -6,6 +6,7 @@ import Section4 from "./components/Section4";
 import Section5 from "./components/Section5";
 import ProgressBar from "./components/ProgressBar";
 import Loader from "./components/Loader";
+import Navbar from "./components/Navbar";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -22,6 +23,7 @@ function App() {
         <Loader />
       ) : (
         <>
+          <Navbar />
           <ProgressBar />
           <Section1 />
           <Section2 />

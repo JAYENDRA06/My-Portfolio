@@ -56,6 +56,13 @@
 
 /* Navbar */
 
+nav {
+  position: fixed;
+  z-index: 99999;
+  /* background-color: var(--skin-color); */
+  width: 100%;
+}
+
 nav > ul{
   display: flex;
   list-style: none;
@@ -242,7 +249,7 @@ nav > ul > li > a:hover{
   left: 50%;
   bottom: 5%;
   transform: translate(-50%);
-  width: 23%;
+  width: 15%;
 }
 
 
@@ -254,30 +261,39 @@ nav > ul > li > a:hover{
   height: 100vh;
   text-align: center;
 }
-.section1 > .heading{
-  position: relative;
-  z-index: 9;
-  margin: 6em 0 7em 0;
-  color: var(--dark-color);
+
+.section1 > .outerHeading{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 90000;
 }
 
-.section1 > .heading > h1{
+.section1 > .outerHeading > .heading{
+  position: relative;
+  z-index: 9;
+  color: var(--dark-color);
+  margin-bottom: 15vh;
+  
+}
+
+.section1 > .outerHeading > .heading > h1{
   font-size: 2.5rem;
   margin-bottom: 1em;
 }
 
-.section1 > .heading > p{
+.section1 > .outerHeading > .heading > p{
   font-size: 1.7rem;
 }
 
-.section1 > .description{
+.section1 > .outerHeading > .description{
   font-size: large;
   position: relative;
   z-index: 9;
-  width: 40%;
-  margin: auto;
+  width: 50%;
   color: white;
-  /* text-shadow: 2px 2px #34343442; */
   background-color: #34343442;
   border-radius: 5px;
   padding: 2em;
