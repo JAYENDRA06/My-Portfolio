@@ -19,11 +19,11 @@ const skillBoxes = [
 
 function Section2(){
     return(
-        <div className="section2" id="skills">
+        <section className="section2" id="skills">
             <h1>My Skills</h1>
             <AllSkills skillBoxes={skillBoxes} />
             <Background2 />
-        </div>
+        </section>
     );
 }
 

@@ -16,15 +16,17 @@ function App() {
       setLoading(false);
     }, 4000);
   }, []);
+  const windowWidth = window.innerWidth;
 
   return (
-    <div className="App">
+    <>
       {loading ? (
         <Loader />
       ) : (
         <>
-          <Navbar />
+          { windowWidth > 970 ? <Navbar /> : null }
           <ProgressBar />
+
           <Section1 />
           <Section2 />
           <Section3 />
@@ -32,7 +34,7 @@ function App() {
           <Section5 />
         </>
       )}
-    </div>
+    </>
   );
 }
 

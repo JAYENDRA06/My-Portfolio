@@ -38,12 +38,12 @@ function Section5() {
       });
   };
   return (
-    <div className="section5" id="contact">
+    <section className="section5" id="contact">
       <Socials />
       <h1>contact Me</h1>
       <Background3 />
       <Form formValues={formValues} setFormValues={setFormValues} form={form} sendEmail={sendEmail} />
-    </div>
+    </section>
   );
 }
 

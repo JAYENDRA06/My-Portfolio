@@ -1,18 +1,31 @@
 import React from "react";
 import Background1 from "./Background1";
 import Socials from "./Socials";
+import { useAnimation } from "framer-motion";
 
 const description =
   "I am a third year CSE undergrad at vit vellore.i completed my +2 from montfort inter college. my life revolves around learning, coding and coffee but sometimes i need a therapy session of playing football or watching anime , watching Chistopher Nolan’s moives.";
 
 function Section1() {
+  const imgAnimation = useAnimation();
+  const winWidth = window.innerWidth;
 
-  const mousePosition = useMousePosition();
+  const handleMouseMove = e => {
+    const { clientX, clientY } = e
+    const moveX = clientX - window.innerWidth / 2
+    const moveY = clientY - window.innerHeight / 2
+    const offsetFactor = 15
+    const sunSize = winWidth*6/100;
+    imgAnimation.start({
+      x: winWidth > 700 ? moveX / offsetFactor - sunSize : -sunSize,
+      y:  winWidth > 700 ? moveY / offsetFactor : 0
+    })
+  }
 
   return (
-    <section className="section1" id="home">
+    <section className="section1" id="home" onMouseMove={e => handleMouseMove(e)}>
       <Socials />
-      <Background1 />
+      <Background1 imgAnimation={imgAnimation} />
       <div className="outerHeading">
         <div className="heading">
           <h1>Hello Samuri</h1>
@@ -23,27 +36,5 @@ function Section1() {
     </section>
   );
 }
-
-const useMousePosition = () => {
-  const [
-    mousePosition,
-    setMousePosition
-  ] = React.useState({ x: null, y: null });
-
-  React.useEffect(() => {
-    const updateMousePosition = ev => {
-      setMousePosition({ x: ev.clientX, y: ev.clientY });
-    };
-    
-    window.addEventListener('mousemove', updateMousePosition);
-
-    return () => {
-      window.removeEventListener('mousemove', updateMousePosition);
-    };
-  }, []);
-
-  return mousePosition;
-};
-
 
 export default Section1;
